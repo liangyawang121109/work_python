@@ -10,17 +10,17 @@ import pymysql
 
 sys.stdout.flush()
 serverInfo = {
-    '172.17.2.65': {
-        'user': 'root',
-        'port': '1662',
+    'IP': {
+        'user': '',
+        'port': '',
         'disk': '',
         'load1': '',
         'load5': '',
         'memory': '',
     },
-    '172.17.2.66': {
-        'user': 'root',
-        'port': '1662',
+    'IP': {
+        'user': '',
+        'port': '',
         'disk': '',
         'load1': '',
         'load5': '',
@@ -28,7 +28,7 @@ serverInfo = {
     }
 }
 
-PROXYSERVER = '172.17.2.66'
+PROXYSERVER = 'IP'
 DIR_PATH = os.path.split(os.path.realpath(__file__))[0]
 BUILD_CONF = '%s/build.conf' % DIR_PATH
 NS_CONF = '%s/namespace.conf' % DIR_PATH
@@ -38,9 +38,9 @@ environment_tab = 'facilities_environment'
 applicant_tab = 'facilities_applicant'
 project_tab = 'facilities_project'
 TIME = datetime.now()
-MYSQL_SERVER = '172.17.0.203'
+MYSQL_SERVER = 'IP'
 # 初始化数据链接
-db = pymysql.connect(host=MYSQL_SERVER, user='ysx_dba', password='Dba@D83au4acn6', db='cmdb', charset='utf8',
+db = pymysql.connect(host=MYSQL_SERVER, user='user', password='passwd', db='cmdb', charset='utf8',
                      autocommit=True)
 # 执行sql以json格式返回数据
 cur = db.cursor(pymysql.cursors.DictCursor)
