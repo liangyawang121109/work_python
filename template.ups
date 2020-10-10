@@ -1,0 +1,11 @@
+}
+#ENV:       {{ env }}
+#BRANCH:    {{ branch }}
+#PROJECT:   {{ project }}
+#USER:      {{ user }}
+#ACMNS:     {{ namespace }}
+#TIME:      {{ createtime }}
+#TAG:       {{ tag }}
+upstream {{ upstraemname }} {
+server {{ host }}:{{ port }};
+}
